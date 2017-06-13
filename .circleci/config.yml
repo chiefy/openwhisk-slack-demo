@@ -11,5 +11,4 @@ jobs:
           path: /go/src/github.com/chiefy/openwhisk-slack-demo/bin/helloslack
           destination: helloslack
       - setup_remote_docker
-      - run: |
-        make docker-build
+      - run: make docker-build
