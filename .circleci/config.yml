@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.8
+    working_directory: /go/src/github.com/chiefy/openwhisk-slack-demo
+    steps:
+      - checkout
+      - run: make
+      - store_artifacts:
+          path: /go/src/github.com/chiefy/openwhisk-slack-demo/bin/helloslack
+          destination: helloslack
