@@ -13,8 +13,8 @@ bin/$(BINARY_NAME): bin $(GOFILES)
 .PHONY: docker-build
 docker-build:
 	TAG=latest
-	docker build -t chiefy/openwhisk-demo:$TAG .
+	docker build -t quay.io/chiefy/openwhisk-demo:$TAG .
 	docker login -u ${QUAY_USER} -p ${QUAY_TOKEN} https://quay.io
-	docker push chiefy/openwhisk-demo:$TAG
+	docker push quay.io/chiefy/openwhisk-demo:$TAG
 
 
