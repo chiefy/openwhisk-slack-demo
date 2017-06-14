@@ -1,17 +1,13 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 )
 
 type Message struct {
-	Text  string `json:"text"`
-	Error bool   `json:"error"`
+	Text string `json:"text"`
 }
 
 func main() {
-	jsonData := &Message{"Hello, world!", false}
-	b, _ := json.Marshal(jsonData)
-	fmt.Print(string(b))
+	fmt.Print("{ \"msg\":\"hi\" }")
 }
