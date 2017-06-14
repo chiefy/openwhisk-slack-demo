@@ -13,5 +13,5 @@ type Message struct {
 func main() {
 	jsonData := &Message{"Hello, world!", false}
 	b, _ := json.Marshal(jsonData)
-	fmt.Println(string(b))
+	fmt.Print(string(b))
 }
