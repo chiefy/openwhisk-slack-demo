@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 )
 
@@ -9,5 +10,6 @@ type Message struct {
 }
 
 func main() {
-	fmt.Print("{ \"msg\":\"hi\" }")
+	b, _ := json.Marshal(&Message{"Hello, world!"})
+	fmt.Print(string(b))
 }
